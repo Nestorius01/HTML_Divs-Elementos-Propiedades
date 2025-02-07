@@ -1,0 +1,1030 @@
+/*Media query*/
+@media screen and (max-width: 1300px) {
+    header a {
+        font-size: 10px;
+    }
+    body {
+        font-size: 12px;
+    }
+    footer{
+        font-size: 12px;
+    }
+    body .propiedades-weightstyle {
+        background-color: rgb(85, 71, 95);
+        display: inline-block;
+        width: 100%;
+        font-size:x-large;
+    }
+    
+}
+@media screen and (max-width: 900px) {
+    header a {
+        font-size: 10px;
+    }
+    body {
+        font-size: 12px;
+    }
+    footer{
+        font-size: 12px;
+    }
+    body .propiedades-weightstyle {
+        background-color: rgb(95, 71, 78);
+        display: inline-block;
+        width: 100%;
+        font-size:large;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    header a {
+        font-size: 10px;
+    }
+    body {
+        font-size: 12px;
+    }
+    footer{
+        font-size: 12px;
+    }
+    body .propiedades-weightstyle {
+        background-color: rgb(95, 95, 71);
+        display: inline-block;
+        width: 100%;
+        font-size:small;
+    }
+    
+}
+@media (max-width: 520px) {
+    header a {
+        font-size: 10px;
+    }
+    body {
+        font-size: 8px;
+    }
+    footer{
+        font-size: 8px;
+    }
+    body .propiedades-weightstyle {
+        background-color: rgb(71, 95, 80);
+        display: inline-block;
+        font-size: smaller
+        
+    }
+}
+/*Familia de letras aplicadas*/
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*Selección de colores*/
+:root{
+    --color-header: rgb(99, 98, 121);
+    --color-h2: rgb(137, 148, 167);
+}
+/*Selector general*/
+* {
+    font-family: 'Lexend', sans-serif;
+    color: rgb(211, 207, 219);
+    margin: 0px;
+    box-sizing: border-box;
+}
+/*Ventana flotante para volver a lista principal*/
+.ventana-flotante {
+    position: fixed; /* Mantiene el div fijo en la pantalla */
+    bottom: 0; /* Esto fija la posición del Div, no la distancia */
+    right: 0; /* Esto dija la posición del Div, no la distancia */
+    width: 10em; /* El ancho del botón */
+    background-color: #3e7279; /* Color del fondo del botón */
+    border: 2px double #5ecedd;
+    border-radius: 8px;
+    color: white; /* Color del texto */
+    padding: 0.2%; /* Padding for content inside */
+    margin: 8px;
+    text-align: center; /* Center the text */
+    box-shadow: 0 -4px 5px rgba(13, 110, 201, 0.3); /* Add shadow for depth */
+}
+.ventana-flotante a::before {
+    content: "🔝​";
+}
+.ventana-flotante:hover {
+    background-color: darkcyan;
+    transition: all;
+    transform: scale(1.1);
+}
+/*Cuerpo principal*/
+header {
+    line-height: 1.6rem;
+    background-color: var(--color-header);
+    padding: 2rem;
+}
+.nav{
+    margin: 0px 10px;
+}
+.nav a {
+    color: #d4f852;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.nav a:hover {
+    background-color: #3e7279;
+    color: #34fd3e;
+    padding: 10px 10px;
+}
+body {
+    background-color: black;
+}
+footer {
+    background-color: rgb(73, 73, 73);
+    padding: 40px;
+}
+/*Estilos de letras y encabezados*/
+h1, h2 {
+    text-align: center;
+    padding: 10px;
+}
+h1::before {
+    content: url(../imagenes/html.png);
+    padding: 10px;
+}
+h1::after {
+    content: url(../imagenes/css.png);
+    padding: 10px;
+}
+h2 {
+    background-color: var(--color-h2);
+}
+h2::before {
+    content: url(../imagenes/tag.png);
+    padding: 10px;
+}
+h3 {
+    margin: 2rem;
+    text-align: center;
+    background-color: #223e42;
+    margin: 5% 5%;
+    padding: 1rem;
+    border-left: 4px dashed #5ecedd;
+    border-right: 4px dashed #5ecedd;
+}
+p {
+    margin: 14px;
+}
+.list a {
+    margin-right: 15px;
+    text-decoration: none;
+    padding: 1rem;
+}
+.list li a:hover {
+    color: aqua;
+    background-color: #434481;
+    background-size: 50%;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.list {
+    display: flex;
+    background-color: #308ca8;
+    margin-bottom: 150px;
+    list-style: none;
+    text-align: left;
+    padding: 1% 15%;
+}
+.submenu {
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0px;
+    text-decoration: none;
+    
+}
+.submenu li {
+    
+    line-height: 3rem;
+}
+.submenu a {
+    padding: 5px 10px;
+}
+.list > .properties:hover .submenu {
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #308ca8;
+    
+    
+}
+/*Estilos de tabla 1.Selectores*/
+.selectores table, .selectores thead {
+    border: 2px;
+    border-style: solid;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+.selectores th {
+    padding: 2%;
+}
+.selectores tr:nth-child(even) {
+    background-color: #3f3f3f;
+}
+.selectores td {
+    border: 2px;
+    border-style: solid;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    font-size: smaller;
+}
+.selectores tr:hover {
+    font-size: larger;
+    background-color: rgb(13, 31, 36);
+}
+/*Estilos 2.Combinadores*/
+.combinadores {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-bottom: 5%;
+}
+.combinador {
+    background-color: #3f3f3f;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin:4%;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+}
+/*Estilos 3.Pseudo-clases*/
+.pseudo-clases {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 4%;
+}
+.pseudo-clase {
+    border: 5px solid rgb(101, 101, 138);
+    border-radius: 10px;
+    background-color: #3f3f3f;
+    display: inline-flex;
+    margin: 2%;
+}
+.pseudo-clase strong {
+    border: 2px solid rgb(115, 129, 123);
+    background-color: rgb(115, 129, 123);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 10px;
+}
+.pseudo-clase strong::before {
+    content: url(../iconos/artificial-intelligence.png);
+    margin-right: 10px;
+}
+/*Estilos 4.Pseudo-elementos*/
+.pseudo-elemento {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: rgb(115, 129, 123);
+    margin: 3%;
+    padding: 1%;
+    display: inline-block;
+}
+.pseudo-elemento h1 {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    text-align: left;
+    margin: 1%;
+    padding: 1%;
+}
+.pseudo-elemento h1::before {
+    content: url(../iconos/fire.png);
+}
+.pseudo-elemento h1::after {
+    content: url(../iconos/star.png);
+}
+.pseudo-elemento h4 {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    margin-bottom: 10%;
+    padding: 2%;
+}
+/*Pseudo-elemento::first-line*/
+.pseudo-elementofl p {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+}
+.pseudo-elementofl p::first-line {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.pseudo-elementofle p {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+}
+.pseudo-elementofle p::first-letter {
+    font-family: 'Lavishly Yours', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+
+}
+.pseudo-elementose p {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+}
+.pseudo-elementose p::selection {
+    background-color: yellow;
+    color: red;
+}
+.pseudo-elementom ul {
+    border: 4px solid rgb(0, 102, 128);
+    border-radius: 8px;
+    background-color: #3f3f3f;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+}
+.pseudo-elementom ul li::marker {
+    content: "▶︎";
+    color: green;
+    font-size: 1.2em;
+}
+/*Estilos 5.Propiedades---------------------------------------------------------------------*/
+.propiedades{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2%;
+}
+/*5.1 --------------------------------.Propiedad-font-family----------------------------------------------------------*/
+.propiedad-font-family {
+    border: 4px double skyblue;
+    border-inline-start: 9px dotted rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: darkslategrey;
+    display: inline-block;
+    margin: 5%;
+}
+.propiedad-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    margin: 2%;
+}
+.propiedad-font-family h5 {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: chocolate;
+    margin: 5% ;
+    padding: 3%;
+    width: 90%;
+    font-size: 0.8em;
+}
+.propiedad-font-family img {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: chocolate;
+    margin: 5% ;
+    padding: 3%;
+    width: 50%;
+}
+/*5.1 .font-family & .explaining*/
+.font-family {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: #486645;
+    margin-right: 4%;
+    width: 100%;
+}
+.explaining { /*Aspecto general del contenedor de explaining (luego decidimos color y fuente de las letras)*/
+    border: 2px solid rgb(212, 143, 40);
+    border-radius: 20px;
+    background-color: rgb(49, 55, 66);
+    margin: 4%;
+    width: 90%;
+    height: auto;
+}
+/*Color de fuente y fuente ------------------------------------------------------------------------*/
+/*Ejemplo 1*/
+.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: #f4f4f4;
+    padding: 11%;
+}
+/*Ejemplo 2*/
+.serif{
+    font-family: "Times New Roman", Georgia, serif;
+    color: #333;
+    background-color: white;
+    padding: 12.9%;
+}
+/*Ejemplo 3*/
+.code.code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #ddd;
+    color: black;
+    padding: 10.9%;
+    border-radius: 5px;
+}
+/*Ejemplo 4*/
+.cursive{
+    font-family: "Brush Script MT", "Comic Sans MS", cursive;
+    color: darkblue;
+    background-color: white;
+    padding: 8%;
+    border-radius: 5px;
+}
+/*Ejemplo 5*/
+.roboto{
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    background-color: white;
+    padding: 9%;
+    border-radius: 5px;
+}
+/*5.2 .-------------------------------------Propiedad-font-size------------------------------------------------------*/
+.propiedades-size {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+.propiedad-font-size{
+    border: 4px dashed rgb(135, 235, 185);
+    border-inline-end: 4px solid rgb(135, 235, 185);
+    border-inline-start: 4px solid rgb(135, 235, 185);
+    border-radius: 25px;
+    background-color: rgb(56, 88, 72);
+    display: inline-block;
+    margin: 1% 6%;
+}
+/*.font-size + .explaining-size + example (Diseño de contenedores)*/
+.font-size{
+    background-image: linear-gradient(to right, rgb(190, 205, 211), rgb(108, 131, 116), rgb(34, 71, 45), rgb(32, 43, 19));
+    padding: 2%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 2fr;
+}
+.font-size h5 {
+    font-size: 1.5em;
+    padding: 2%;
+    color: #000000;
+}
+.font-size img {
+    width: 100%;
+    
+}
+.explaining-size {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.example{
+    border: 2px solid grey;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 3%;
+    margin: 2%;
+}
+/*Color de fuente & tamaños de fuente / EJEMPLOS*/
+.pixels-size {
+    font-size: 32px;
+    color: #333;
+}
+.points-size {
+    font-size: 24pt;
+    color: darkblue;
+}
+.em-size {
+    font-size: 2.2em; /* 1.2 veces el tamaño de la fuente base */
+    color: #888;
+}
+.rem-size {
+    font-size: 2rem; /* 2 veces el tamaño de la raíz */
+    color: yellow;
+}
+.percent-size-div {
+    font-size: 150%; /* 1.5 veces el tamaño predeterminado */
+    color: skyblue;
+}
+.percent-size-span span{
+    font-size: 150%; /* 1.5 veces el tamaño predeterminado */
+ color: purple;
+}
+.small-size{
+    font-size: small;
+    color: orange;
+}
+.smaller-size{
+    font-size: smaller;
+    color: orangered;
+}
+.large-size{
+    font-size: large;
+    color: black;
+}
+.larger-size{
+    font-size: larger;
+    color: darkgrey;
+}
+/*5.3--------------------------------------------Propiedad font-weight & font-style--------------------------*/
+.h3-5-3-background {
+    background-color: rgb(71, 84, 95);
+    padding: 2px;
+    margin-top: 5%;
+}
+.propiedades-weightstyle {
+    background-color: rgb(71, 84, 95);
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+.screen {
+    padding-top: 2%;
+    margin-top: 20%;
+    margin-bottom: 45%;
+}
+.screen img {
+    width: 10%;
+    height: 20%;
+    margin: 2%;
+}
+.propiedad-weightstyle{
+    background-image:  url(../imagenes/monitor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 5%;
+    margin-left: 2%;
+}
+.example-weightstyle{
+    background-color: #333;
+    color: #e2d34a;
+    padding: 2%;
+}
+/*Cambio de color de la letra*/
+.h5-weightstyle {
+    color: black;
+    font-size: 1em;
+}
+.weightstyle-normal{
+    color: #333;
+    font-weight: normal;
+    font-style: normal;
+}
+.weightstyle-bold{
+    font-weight: bold;
+    font-style: normal;
+    color: darkblue;
+}
+.weightstyle-lighter{
+    font-weight: lighter;
+    font-style: normal;
+    color: #01fd38;
+}
+.weightstyle-italic{
+    font-weight: normal;
+    font-style: italic;
+    color: orangered;
+}
+/*5.4--------------------------------------------Propiedad line-height--------------------------*/
+.table-lineheight, .table-lineheight thead{
+    border: 6px double greenyellow;
+    border-collapse:collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+.table-lineheight th{
+    padding: 2%;
+    text-align: center;
+    font-size: x-large;
+}
+.table-lineheight td {
+    border: 6px double greenyellow;
+    border-collapse: collapse;
+    width: 33%;
+    padding: 2%;
+}
+/*Aplicación de reglas para párrafos de ejemplos*/
+.td-numerico {
+    font-size: 16px;
+    line-height: 1.5;
+    color: skyblue;
+}
+.td-fijo {
+    font-size: 16 px;
+    line-height: 32px;
+    color: pink;
+}
+.td-reducido {
+    font-size: 16px;
+    line-height: 0.8;
+    color: lightgreen;
+}
+.td-lineheight-consejo {
+    background-color: #131e24;
+    font-size: large;
+    color: rgb(214, 120, 120);
+}
+.td-lineheight-consejo::before{
+    content: url(../imagenes/warning.png);
+    padding-right: 1%;
+}
+/*--5.5---------------------------------------------Propiedad color------------------------------------*/
+.formatos-colores {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2%;
+    padding: 2%;
+}
+.formato-color {
+    background-color: #28492f;
+    margin: 2%;
+}
+.formato-color-encabezado {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 5%;
+}
+.formato-color-encabezado img{
+    width: 65%;
+}
+/* Color por nombre*/
+.color-clase {
+    color: #cfcfcf;
+    padding: 2%;
+    background-color: #131e24;
+}
+.ejemplo-nombre {
+    color: red;
+    background-color: lightblue;
+    padding: 2%;
+}
+.ejemplo-hexagesimal {
+    color: #4CAF50;
+    background-color: #f4f4f4;
+    padding: 2%;
+}
+.ejemplo-rgb {
+    color: rgb(255, 165, 0);
+    background-color: rgb(240, 240, 240);
+    padding: 2%;
+}
+.ejemplo-rgba {
+    color: rgba(0, 0, 105, 1);
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 2%;
+}
+.ejemplo-hsl {
+    color: hsl(120, 100%, 25%);
+    background-color: hsl(240, 100%, 90%);
+    padding: 2%;
+}
+.ejemplo-hlsa {
+    color: hsla(300, 100%, 50%, 1); /* Morado */
+    background-color: hsla(300, 100%, 50%, 0.2); /* Morado transparente */
+}
+/*--5.6---------------------------------------------Propiedad background-color------------------------------------*/
+.formatos-background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.formato-background {
+    background-color: #c7dbe6;
+    padding: 2%;
+    margin: 2%;
+}
+.formato-background h4{
+    color: #131e24;
+}
+.fondo-color {
+    background-color: #3f3f3f;
+    padding: 4%;
+}
+.ejemplo-background-nombre {
+    background-color: skyblue;
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+.ejemplo-background-hexadecimal {
+    background-color: #FFDDC1;
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+.ejemplo-background-rgb {
+    background-color: rgb( 125, 140, 160);
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+.ejemplo-background-rgba {
+    background-color: rgba(180, 20, 40, 0.3);
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+.ejemplo-background-hsl {
+    background-color: hsl(200, 70%, 80%);
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+.ejemplo-background-hsla {
+    background-color: hsla(340, 80%, 70%, 0.5);
+    color: black;
+    padding: 10px;
+    border: 1px solid green;
+}
+/*--5.7---------------------------------------------Propiedad opacity------------------------------------*/
+.formatos-opacity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 10%;
+}
+.formato-opacity {
+    padding: 2%;
+    background-color: #555;
+    background-image: url(../imagenes/groundhog1.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:contain;
+    width: 90%;
+    margin-bottom: 10%;
+}
+.formato-opacity .transparency {
+    background-color: #131e24;
+    border: 2px solid #131e24;
+    border-radius: 10%;
+    padding: 2%;
+    width: 40%;
+    height: 40%;
+    margin: 2%;
+}
+.formato-opacity h4{
+    background-color: #364239;
+    padding: 4%;
+    margin-top: 10%;
+}
+.ejemplo-opacity {
+    display: inline-flex;
+    width: 100%;
+}
+.formatos-opacity figure {
+    background-color: #131e24;
+    border: 2px solid #131e24;
+    border-radius: 10%;
+    padding: 5%;
+    margin: 2%;
+    width: 100%;
+    font-size: larger;
+    text-align: center;
+}
+.formato-opacity .marmota {
+    border: 2px solid skyblue;
+    border-radius: 50%;
+    margin: 2%;
+    width: 100%;
+}
+.div-low-opacity {
+    background-color: #246331;
+    margin-top: 10%;
+    padding: 1%;
+    padding-bottom: 70%;
+    text-align: left;
+    opacity: 0.8;
+}
+.div-low-opacity>p , .div-low-opacity2>p {
+    opacity: 2;
+    color: #e4fd01;
+}
+.div-low-opacity2 {
+    background-color: #000000;
+    margin-top: 10%;
+    padding: 1%;
+    padding-bottom: 70%;
+    text-align: left;
+    opacity: 0.5;
+}
+/*--5.8---------------------------------------------Propiedad background-image------------------------------------*/
+.formatos-background-image {
+    background-color: #524840;
+    padding: 2%;
+}
+.formato-background-image {
+    background-color: #31282a;
+    padding: 2%;
+}
+.back-image-head {
+    background-color: #000000;
+    padding: 1%;
+    border: 2px solid #01fd38;
+    margin: 2%;
+}
+.images-list {
+    background-color: #191535;
+    padding: 1%;
+    margin-right: 1%;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    text-align: center;
+    font-size: large;
+}
+#backgroundexample {
+    border: 2px solid cornflowerblue;
+    padding: 4%;
+    height: 400px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin-left: 25%;
+    font-size: large;
+}
+/*Estilos 6.Márgenes simétricos y asimétricos*/
+.propiedades-margen {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.propiedad-margen-simetrico{
+    background-color: #191535;
+    padding: 2%;
+    display: flex;
+}
+.propiedad-margen-asimetrico{
+    background-color: #382f74;
+    padding: 2%;
+    display: flex;
+}
+.propiedad-margen-simetrico p {
+    background-color: #3e7279;
+    margin: 5%;
+    padding: 2%;
+}
+.propiedad-margen-simetrico img {
+    background-color: #3e7279;
+    margin: 5%;
+    padding: 2%;
+}
+.propiedad-margen-asimetrico p {
+    background-color: #3e7279;
+    margin: 1% 4% 10% 5%;
+    padding: 1% 4% 10% 30%;
+}
+.propiedad-margen-asimetrico img {
+    background-color: #3e7279;
+    margin: 1% 4% 5% 2%;
+    padding: 1% 4% 8% 2%;
+}
+.ejemplo-margen {
+    background-color: #223e42;
+    margin: 2% 80% 0% 2%;
+    padding: 2%;
+}
+/*FORMULARIO DE SUSCRIPCIÓN ACCESIBLE Y SEGURO*/
+
+/*Colores elementos, propiedades y métodos*/
+.el {
+    color: rgb(89, 122, 192);
+}
+.pr {
+    color: rgb(45, 177, 187);
+}
+.val {
+    color: rgb(180, 134, 49);
+}
+.cla {
+    color: rgb(201, 178, 76);
+}
+.com {
+    color: #538117;
+}
+.imp {
+    color: rgb(167, 41, 167);
+}
+/*Clases Formulario*/
+.formulario {
+    border: 2px solid rgb(233, 233, 188);
+    background-color: #3a4144;
+    padding: 2%;
+}
+.resultado {
+    background-color: #308ca8;
+    padding: 2%;
+    border-radius: 6px;
+}
+.legend {
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 1%;
+    background-color: #252525;
+}
+.code-form {
+    background-color: #252525;
+    padding: 2%;
+    margin: 2%;
+}
+.roboto2 p, .roboto2 span{
+    font-family: 'Courier New', Courier, monospace;
+}
+.aplicacion {
+    background-color: #131e24;
+    padding: 2%;
+    line-height: 1.2rem;
+}
+.php {
+    border: 2px solid green;
+}
+/*DISPLAY STYLES*/
+.display {
+    background-color: #12162b;
+    padding: 2%;
+    margin: 2%;
+}
+.display ul li {
+    padding: 0px 8px;
+    color: #01fd38;
+}
+.block img {
+    display: block;
+    width: 100px;
+}
+.grid {
+    display: grid;
+    margin: 2px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+.grid img {
+    width: 100px;
+    margin: 10px;
+}
+/*ACCESIBILIDAD*/
+.outline {
+    background-color: #252525;
+    padding: 2%;
+}
+.outline-m {
+    background-color: #486645;
+    border: 2px solid green;
+}
+.focus{
+    background-color: #333;
+    padding: 2%;
+    margin: 2% 0%;
+}
+/*Optimización Fuentes*/
+.woff2 {
+    background-color: #131e24;
+    padding: 2%;
+    margin: 2%;
+    font-size: 1rem;
+}
+.ejemplo {
+    background-color: #2e2e2e;
+    padding: 2%;
+    margin: 1%;
+}
+.ejemplo thead {
+    background-color: rgb(172, 130, 52);
+}
+.ejemplo table, .ejemplo thead{
+    border: 2px solid orange;
+    border-radius: 2px;
+    border-collapse: collapse;
+    text-align: center;
+    width: 90% ;
+    margin: 4%;
+}
+.ejemplo th, .ejemplo td {
+    border: 2px solid orange;
+    border-radius: 2px;
+    border-collapse: collapse;
+    padding: 2%;
+}
+.ejemplo tbody tr:nth-child(odd) {
+    background-color: rgb(59, 46, 20);
+}
+.grafica {
+    padding: 4%;
+    text-align: center;
+}
+   
