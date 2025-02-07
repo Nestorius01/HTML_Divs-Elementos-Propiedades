@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Página principal del ejercicio</title>
+</head>
+<body>
+    <header>
+        <h1>Página de estilos CSS</h1>
+        <div class="nav">
+        <nav><a href="index.html">Estilos CSS</a><a href="display.html">Display</a><a href="form.html">Formulario</a><a href="accesibilty.html">Accesibilidad</a><a href="optimifuentes.html">Optimizar Fuentes</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="ventana-flotante">
+            <nav><a href="#list">Índice</a></nav>
+        </div>
+        <!--Introducción-->
+        <div class="intro">
+            <h2>Tipos de atributos aplicados a estilos</h2>
+            <!--Lista de tipos de atributos-->
+            <ol class="list" id="list">
+                <li><a href="#selectores">Selectores</a></li>
+                <li><a href="#combinadores">Combinadores</a></li>
+                <li><a href="#pseudo-clases">Pseudo-clases</a></li>
+                <li><a href="#pseudo-elementos">Pseudo-elementos</a></li>
+                <li  class="properties"><a href="#propiedades">Propiedades</a>
+                <ul class="submenu">
+                    <li><a href="#font-family">font-family</a></li>
+                    <li><a href="#font-size">font-size</a></li>
+                    <li><a href="#font-weight">font-weight</a></li>
+                    <li><a href="#font-style">font-style</a></li>
+                    <li><a href="#line-height">line-height</a></li>
+                    <li><a href="#formatos-colores">formatos de colores</a></li>
+                    <li><a href="#background-color">background-color</a></li>
+                    <li><a href="#opacity">opacity</a></li>
+                    <li><a href="#background-image">background-image</a></li>
+                </ul>
+                </li>
+                <li><a href="#margenessim">Márgenes simétricos y asimétricos</a></li>
+                <li><a href="#propiedadpadding">Propiedad padding</a></li>
+            </ol>
+        </div>
+        <!--SECCIONES-->
+        <div class="sections">
+            <!--1.Selectores en tabla-->
+            <div class="selectores" id="selectores">
+                <h2>1. Selectores</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Tipos de selectores y ejemplos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Esto es un selector universal:</td>
+                            <td>*{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de etiqueta:</td>
+                            <td>body{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector destacado(Clase):</td>
+                            <td>.destacado{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de ID:</td>
+                            <td>#especial{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de atributo:</td>
+                            <td>a[href^="https://"]{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector descendente:</td>
+                            <td>div p{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de hijo directo:</td>
+                            <td>ul>li{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de pseudo-clase:</td>
+                            <td>a:hover{}</td>
+                        </tr>
+                        <tr>
+                            <td>Esto es un selector de pseudo-elemento:</td>
+                            <td>p::first-line{}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--2.Combinadores en grid-->
+            <h2>2.Combinadores</h2>
+            <h3>El combinador une dos elementos y adjudica una jerarquía y reacción en el diseño:</h3>
+            <div class="combinadores" id="combinadores">
+                <!--combinadores-->
+                <div class="combinador">
+                    <p>Combinador descendiente:</p>
+                    <p><em>div p {<br>color: blue;<br>}</em></p>
+                </div>
+                <div class="combinador">
+                    <p>Combinador hijo directo:</p>
+                    <p><em>div > p {<br>font-weight: bold;<br>}</em></p>
+                </div>
+                <div class="combinador">
+                    <p>Combinador adyacente (+):</p>
+                    <p><em>h1 + p {<br>color: red<br>font-style: italic;<br>}</em></p>
+                </div>
+                <div class="combinador">
+                    <p>Combinador general de hermanos (~):</p>
+                    <p><em>h1 ~ p {<br>color: blue<br>text-decoration: underline;<br>}</em></p>
+                </div>
+            </div>
+            <!--3.Pseudo-clases-->
+            <h2>3.Pseudo-clases</h2>
+            <h3>Las pseudo-clases adjudican posiciones, reacciones y diseños a elementos y sus posiciones relativas:</h3>
+            <div class="pseudo-clases" id="pseudo-clases">
+            
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase de enlace visitado:</strong><br><p>a:visited {<br>color: purple;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase de enlace al pasar el ratón por encima:</strong><br><p>a:hover {<br>color: red;<br>text-decoration: underline;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase de primer hijo:</strong><br><p>p:first-child {<br>font-weight: bold;<br>color: green;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase de último hijo:</strong><br><p>p:last-child {<br>font-style: italic;<br>color: blue;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase para elementos activos:</strong><br><p>button:active {<br>background-color: yellow;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase para enfoque:</strong><br><p>input:focus {<br>border: 2px solid orange;<br>outline: none;<br>}</p>
+            </div>
+            <div class="pseudo-clase">
+                <strong>Pseudo-clase para elementos vacíos:</strong><br><p>div:empty {<br>border: 2px dashed red;<br>padding: 10px;<br>text-aling: center;<br>}</p>
+            </div>
+            </div>
+            <!--4.Pseudo-elementos-->
+            <div class="pseudo-elementos" id="pseudo-elementos">
+                <h2>4.Pseudo-elementos</h2>
+                <h3>Los pseudo-elementos son parecidos a las pseudo-clases. Pero permiten integrar iconos e imágenes, y modificar letras del texto que seleccionemos:</h3>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::before:</h4>
+                    <p>h1::before {<br>content: "<img src="iconos/fire.png" alt="Llama de fuego">";<br>font-size: 1.5em;<br>color: orange;<br>}</p>
+                    <h1>Esto es un encabezado</h1>
+                </div>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::after:</h4>
+                    <p>h1::after {<br>content: "<img src="iconos/star.png" alt="Llama de fuego">";<br>font-size: 1.5em;<br>color: gold;<br>}</p>
+                    <h1>Esto es otro encabezado</h1>
+                </div>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::first-line:</h4>
+                    <p>p::first-line {<br>font-weight: bold;<br>text-transform: uppercase;<br>color: blue;<br>}</p>
+                    <div class="pseudo-elementofl">
+                        <p>Esto es la 1a línea<br>Esto es otra línea</p>
+                    </div>
+                </div>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::first-letter:</h4>
+                    <p>p::first-letter {<br>font-size: 2em;<br>font-weight: bold;<br>color: red;<br>}</p>
+                    <div class="pseudo-elementofle">
+                        <p>Esto es un párrafo con ::first-letter</p>
+                    </div>
+                </div>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::selection:</h4>
+                    <p>p::selection {<br>background-color: yellow;<br>color: red;<br>}</p>
+                    <div class="pseudo-elementose">
+                        <p>Esto es un párrafo con ::selection</p>
+                    </div>
+                    <p>Selecciona el texto en la caja</p>
+                </div>
+                <div class="pseudo-elemento">
+                    <h4>Pseudo-elemento ::marker para listas</h4>
+                    <p>ul li::marker {<br>content: "▶︎";<br>color: green;<br>font-size: 1.2em;<br>}</p>
+                    <div class="pseudo-elementom">
+                        <ul>
+                            <li>Ejemplo de lista 1</li>
+                            <li>Ejemplo de lista 2</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--5.Propiedades-->
+            <h2>5.Propiedades</h2>
+            <h3>5.1 En este apartado se clasifican las propiedades para tipos de "font-family" en las <em><b><u>fuentes</u></b></em>:</h3>
+            <!--5.1------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES FONT-FAMILY---------------------------------->
+            <div class="propiedades" id="propiedades">
+                <!--CONTENEDOR 1ª PROPIEDAD FONT-FAMILY-->
+                <div class="propiedad-font-family" id="font-family">
+                    <div class="propiedad-top">
+                        <div class="top-logo-aplicacion">
+                            <img src="imagenes/font (1).png" alt="icono de letra A">
+                            <h5>Aplicar una fuente sans-serif genérica:</h5>
+                        </div>
+                        <div class="font-family" id="font-family">
+                            <p>body {<br>font-family: Arial, Helvetica, sans-serif;<br>background-color: #f4f4f4;<br>padding: 20px;<br>}</p>
+                        </div>
+                    </div>    
+                    <div class="explaining">
+                        <p class="sans-serif">En el &ltbody&gt, se aplica una fuente sans-serif (Arial, con fallback a Helvetica o
+                        cualquier fuente sans-serif genérica).</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 2ª PROPIEDAD FONT-FAMILY-->
+                <div class="propiedad-font-family">
+                    <div class="propiedad-top">
+                        <div class="top-logo-aplicacion">
+                            <img src="imagenes/font (1).png" alt="icono de letra A">
+                            <h5>Aplicar una fuente serif:</h5>
+                        </div>    
+                        <div class="font-family" id="font-family">
+                            <p>h1 {<br>font-family: "Times New Roman", Georgia, serif;<br>color: #333;<br>}</p>
+                        </div>
+                    </div>
+                    <div class="explaining">
+                        <p class="serif">El &ltH1&gt utiliza una fuente serif clásica (Times New Roman con fallback a
+                            Georgia).</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 3ª PROPIEDAD FONT-FAMILY-->
+                <div class="propiedad-font-family">
+                    <div class="propiedad-top">
+                        <div class="top-logo-aplicacion">
+                            <img src="imagenes/font (1).png" alt="icono de letra A">
+                            <h5>Aplicar una fuente monospace:</h5>
+                        </div>
+                        <div class="font-family" id="font-family">
+                            <p>p.code {<br>font-family: "Courier New", Courier, monospace;<br>background-color: #ddd;<br>padding: 10px;<br> border-radius: 5px;<br>}</p>
+                        </div>
+                    </div>
+                    <div class="explaining">
+                        <p class="code">Los párrafos con la clase code utilizan una fuente monoespaciada (Courier
+                            New).</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 4ª PROPIEDAD FONT-FAMILY-->
+                <div class="propiedad-font-family">
+                    <div class="propiedad-top">
+                        <div class="top-logo-aplicacion">
+                            <img src="imagenes/font (1).png" alt="icono de letra A">
+                            <h5>Aplicar una fuente decorativa con fallbacks:</h5>
+                        </div>
+                        <div class="font-family" id="font-family">
+                            <p>h2 {<br>font-family: "Brush Script MT", "Comic Sans MS", cursive;<br>color: darkblue;<br>}</p>
+                        </div>
+                    </div>
+                    <div class="explaining">
+                        <p class="cursive">En este &lth2&gt, se utiliza una fuente cursiva decorativa (Brush Script MT con
+                            fallback a Comic Sans MS o cualquier fuente cursive).</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 5ª PROPIEDAD FONT-FAMILY-->
+                <div class="propiedad-font-family">
+                    <div class="propiedad-top">
+                        <div class="top-logo-aplicacion">
+                            <img src="imagenes/font (1).png" alt="icono de letra A">
+                            <h5>Aplicar una fuente importada de (Google Fonts):</h5>
+                        </div>
+                        <div class="font-family" id="font-family">
+                            <p>p.roboto {<br>font-family: 'Roboto', sans-serif;<br>color: #555;<br>}</p>
+                        </div>
+                    </div>
+                    <div class="explaining">
+                        <p class="roboto">Se importa la fuente Roboto desde Google Fonts, aplicada a los párrafos con la
+                            clase roboto.</p>
+                    </div>
+                </div>
+            </div>
+            <h3>5.2 En este apartado observamos los cambios que se realizan con la propiedad "font-size" en las <em><b><u>fuentes</u></b></em>:</h3>
+            <!--5.2------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES FONT-SIZE---------------------------------->
+            <div class="propiedades-size" id="font-size">
+                <!--CONTENEDOR 1ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en píxeles:</h5>
+                        <p class="example">h1 { <br>font-size: 32px; <br>color: #333; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="pixels-size">Esto es un ejemplo de font-size en píxeles.</p>
+                        <p>Se usan <b>píxeles</b> para establecer un tamaño fijo y específico en el texto.</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 2ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en puntos:</h5>
+                        <p class="example">h2 { <br>font-size: 24p; <br>color: darkblue; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="points-size">Esto es un ejemplo de font-size en puntos.</p>
+                        <p>Se usan <b>puntos</b> para establecer un tamaño fijo y específico en el texto.</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 3ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en relativo (em):</h5>
+                        <p class="example">p { <br>font-size: 2.2em; <br>color: #888; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="em-size">Este texto utiliza un tamaño relativo en <code>em</code>.</p>
+                        <p><b><em>(em)</em></b> Tamaño relativo al tamaño de fuente del elemento padre.</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 4ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra relativo al tamaño del contenedor (rem):</h5>
+                        <p class="example">.rem-size { <br>font-size: 2rem; <br>color: yellow; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="rem-size">Este texto utiliza un tamaño relativo en <code>rem</code>.</p>
+                        <p><b><em>rem</em></b> Tamaño relativo al tamaño de fuente raíz (rem-size), que suelen ser 16 px por defecto.</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 5ª PROPIEDAD FONT-SIZE (DIV)-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en porcentaje (%):</h5>
+                        <p class="example">.percent-size { <br>font-size: 150%; <br>color: skyblue; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="percent-size-div">Esto es un ejemplo de font-size en porcentaje</p>
+                        <p>Establece el tamaño de la letra como un porcentaje del elemento contenedor <b>(div)</b></p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 5ª PROPIEDAD FONT-SIZE (SPAN)-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en porcentaje (%):</h5>
+                        <p class="example">.percent-size span { <br>font-size: 150%; <br>color: purple; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="percent-size-span">Esto es un <span>ejemplo</span> de font-size en porcentaje</p>
+                        <p>Establece el tamaño de la letra como un porcentaje del elemento contenedor <b>(span)</b></p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 6ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en expresión (small, smaller):</h5>
+                        <p class="example">.small { <br>font-size: small; <br>color: orange; <br> }</p>
+                        <p class="example">.smaller { <br>font-size: smaller; <br>color: orangered; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="small-size">Esto es un ejemplo de font-size en expresión predefinida (small)</p>
+                        <p class="smaller-size">Esto es un ejemplo de font-size en expresión predefinida (smaller)</p>
+                        <p>Se utilizan palabras clave en inglés como: <br>- small (pequeño) <br>- smaller (más pequeño)<br> que contienen tamaños predefinidos.</p>
+                    </div>
+                </div>
+                <!--CONTENEDOR 7ª PROPIEDAD FONT-SIZE-->
+                <div class="propiedad-font-size">
+                    <div class="font-size" id="font-size">
+                        <img src="imagenes/letter.png" alt="letra (A) en distintos tamaños">
+                        <h5>Aplicar tamaño a la letra en expresión (large, larger):</h5>
+                        <p class="example">.large { <br>font-size: large; <br>color: black; <br> }</p>
+                        <p class="example">.larger { <br>font-size: larger; <br>color: darkgrey; <br> }</p>
+                    </div>
+                    <div class="explaining-size">
+                        <p class="large-size">Esto es un ejemplo de font-size en expresión predefinida (large)</p>
+                        <p class="larger-size">Esto es un ejemplo de font-size en expresión predefinida (larger)</p>
+                        <p>Se utilizan palabras clave en inglés como:<br>- large (grande)<br>- larger (más grande)<br>que contienen tamaños predefinidos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="h3-5-3-background">
+                <h3 class="h3-weightstyle">5.3 En este apartado observamos los cambios que se realizan con la propiedad "font-weight" y "font-style" en las <em><b><u>fuentes</u></b></em>:</h3>
+            </div>
+            
+            <!--5.3------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES FONT-WEIGHT Y FONT-STYLE---------------------------------->
+            <div class="propiedades-weightstyle" id="font-weight">
+                <!--CONTENEDOR 1ª PROPIEDAD FONT-WEIGHT/STYLE-->
+                <div class="propiedad-weightstyle">
+                    <div class="font-weightstyle">
+                        <div class="screen">
+                        <img src="imagenes/font (2).png" alt="letra (A) en grosor normal">
+                        <h5 class="h5-weightstyle">Aplicar grosor y estilo a la letra usando la propiedad "normal":</h5>
+                        <p class="example-weightstyle">h1 { <br>font-weight: normal; <br>font-style: normal; <br>color: #333; <br> }</p>
+                        <div class="explaining-weightstyle">
+                            <p class="weightstyle-normal">Esto es un ejemplo de encabezado cuya fuente tiene un grosor y estilo normales.</p>
+                            <p>Se usa la propiedad <b>"normal"</b> para establecer un grosor normal al texto.</p>
+                        </div>
+                        </div><!--Cierre-Screen-->
+                    </div>  
+                </div>
+                <!--CONTENEDOR 2ª PROPIEDAD FONT-WEIGHT/STYLE-->
+                <div class="propiedad-weightstyle">
+                    <div class="font-weightstyle">
+                        <div class="screen">
+                        <img src="imagenes/font (2).png" alt="letra (A) en grosor normal">
+                        <h5 class="h5-weightstyle">Aplicar grosor y estilo a la letra usando la propiedad "bold" :</h5>
+                        <p class="example-weightstyle">h2 { <br>font-weight: bold; <br>font-style: normal; <br>color: darkblue; <br> }</p>
+                        <div class="explaining-weightstyle">
+                            <p class="weightstyle-bold">Esto es un ejemplo de encabezado cuya fuente tiene grosor bold y estilo normal.</p>
+                            <p>Se usa la propiedad <b>"bold"</b> para establecer un grosor en <b>negrita</b> al texto.</p>
+                        </div>
+                        </div><!--Cierre-Screen-->
+                    </div>  
+                </div>
+                <!--CONTENEDOR 3ª PROPIEDAD FONT-WEIGHT/STYLE-->
+                <div class="propiedad-weightstyle">
+                    <div class="font-weightstyle">
+                        <div class="screen">
+                        <img src="imagenes/font (2).png" alt="letra (A) en grosor normal">
+                        <h5 class="h5-weightstyle">Aplicar grosor y estilo a la letra usando la propiedad "lighter":</h5>
+                        <p class="example-weightstyle">p.light { <br>font-weight: lighter; <br>font-style: normal; <br>color: #01fd38; <br> }</p>
+                        <div class="explaining-weightstyle">
+                            <p class="weightstyle-lighter">Esto es un ejemplo de párrafo cuya fuente tiene un grosor fino y estilo normal.</p>
+                            <p>Se usa la propiedad <b>"lighter"</b> para establecer un grosor fino al texto.</p>
+                        </div>
+                        </div><!--Cierre-Screen-->
+                    </div>  
+                </div>
+                <!--CONTENEDOR 4ª PROPIEDAD FONT-WEIGHT/STYLE-->
+                <div class="propiedad-weightstyle">
+                    <div class="font-weightstyle" id="font-style">
+                        <div class="screen">
+                        <img src="imagenes/font (2).png" alt="letra (A) en grosor normal">
+                        <h5 class="h5-weightstyle">Aplicar grosor y estilo a la letra usando la propiedad "italic":</h5>
+                        <p class="example-weightstyle">p.italic { <br>font-weight: normal; <br>font-style: italic; <br>color: #orangered; <br> }</p>
+                        <div class="explaining-weightstyle">
+                            <p class="weightstyle-italic">Esto es un ejemplo de párrafo cuya fuente tiene grosor normal y estilo cursivo.</p>
+                            <p>Se usa la propiedad <b>"italic"</b> para cambiar las letras del texto a <i>cursiva</i>.</p>
+                        </div>
+                        </div><!--Cierre-Screen-->
+                    </div>  
+                </div>
+            </div><!--Cierre de propiedades-weightstyle--> 
+            <!--5.4------------------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES LINE-HEIGHT------------------------->
+            <h3>5.4 En este apartado observamos los cambios que realiza la propiedad "line-height" en las lineas de texto:</h3>
+            <div class="propiedades-lineheight" id="line-height">
+                <table class="table-lineheight">
+                    <thead>
+                        <th colspan="3">Propiedad line-height</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>line-height con un valor numérico</td>
+                            <td>.line-normal {<br> font-size: 16px;<br> line-height: 1.5;<br> color: skyblue;<br>}</td>
+                            <td class="td-numerico">En esta línea de texto se puede observar una separación de una vez y media de distancia entre renglones, siendo esta 1/2 veces mayor de lo comunmente aplicado.</td>
+                        </tr>
+                        <tr>
+                            <td>line-height con una medida específica en píxeles</td>
+                            <td>.line-fixed {<br> font-size: 16 px;<br> line-height: 32px;<br> color: pink;<br>}</td>
+                            <td class="td-fijo">En esta línea de texto se ha aplicado una medida fijada en píxeles, mostrando una separación total de 32px en cualquier pantalla que la observemos. <br>Al ser 16 px la medida natural, esta separación sería de 2 veces la medida de la línea.</td>
+                        </tr>
+                        <tr>
+                            <td>line-height con una medida reducida</td>
+                            <td>.line-small {<br>font-size: 16px; <br>line-height: 0.8; <br> color: lightgreen; <br>}</td>
+                            <td class="td-reducido">En esta línea de texto se está aplicando una separación menor del tamaño predefinido, dejando un espacio muy reducido entre las líneas. <br>Normalmente no se suele aplicar ya que da la sensación de aglomeración.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <td colspan="3" class="td-lineheight-consejo">Debemos tener siempre cuidado con la distacia entre líneas, especialmente cuando importamos fuentes externas, ya que pueden tener separación añadida a raíz del diseño de la letra en cuestión. <br>
+                        También hay que recordar que la medida numérica actúa a raíz del tamaño de la letra que decidamos. A mayor el tamaño de la letra, mayor el tamaño de los espacios entre líneas.</td>
+                    </tfoot>
+                </table>
+            </div><!--Cierre de la propiedad line-height-->
+            <!--5.5------------------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES ESTILOS DE COLORES------------------------->
+            <h3>5.5 En este apartado observamos los formatos que se pueden usar para aplicar color a las lineas de texto:</h3>
+            <div class="formatos-colores" id="formatos-colores">
+                <div class="formato-color"><!--Nombre-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través de los nombres predefinidos</h4>
+                    </div>
+                    <p class="color-clase">.color-nombre {<br> color: red; <br> background-color: lightblue; <br>}</p>
+                    <div class="ejemplo-color-nombre">
+                        <p class="ejemplo-nombre">Este párrafo tiene un color de texto predefinido en inglés, además de un color de fondo en el mismo formato.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+                <div class="formato-color"><!--Hexadecimal-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través del sistema hexadecimal</h4>
+                    </div>
+                    <p class="color-clase">.color-hexadecimal {<br> color: #4CAF50; <br> background-color: #f4f4f4; <br>}</p>
+                    <div class="ejemplo-color-hexagesimal">
+                        <p class="ejemplo-hexagesimal">Este párrafo tiene un color de texto adjudicado en sistema hexagesimal, además de un color de fondo en el mismo formato.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+                <div class="formato-color"><!--RGB-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través del formato RGB (Red, Green, Blue)</h4>
+                    </div>
+                    <p class="color-clase">.color-rgb {<br> color: rgb(255, 165, 0); <br> background-color: rgb(240, 240, 240); <br>}</p>
+                    <div class="ejemplo-color-rgb">
+                        <p class="ejemplo-rgb">Este párrafo tiene un color de texto en formato RGB, además de un color de fondo en el mismo formato.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+                <div class="formato-color"><!--RGBA-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través del formato RGBA (Red, Green, Blue, Alpha)</h4>
+                    </div>
+                    <p class="color-clase">.color-rgba {<br> color: rgba(0, 0, 255, 1); <br> background-color: rgba(255, 0, 0, 0.2); <br>}</p>
+                    <div class="ejemplo-color-rgba">
+                        <p class="ejemplo-rgba">Este párrafo tiene un color de texto con una transparencia nula, además de un color de fondo con transparencia alta.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+                <div class="formato-color"><!--HLS-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través del formato HLS (Hue, Saturation, Light)</h4>
+                    </div>
+                    <p class="color-clase">.color-hsl {<br> color: hsl(120, 100%, 25%); <br> background-color: hsl(240, 100%, 90%); <br>}</p>
+                    <div class="ejemplo-color-hsl">
+                        <p class="ejemplo-hsl">Este párrafo tiene un color de texto adjudicado con el sistema HSL, además de un color de fondo en el mismo formato.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+                <div class="formato-color"><!--HLSA-->
+                    <div class="formato-color-encabezado">
+                        <img src="imagenes/pantone.png" alt="Una escala pantone abierta">
+                        <h4>Aquí vamos a aplicar el color al texto a través del formato HSLA (Red, Green, Blue, Alpha)</h4>
+                    </div>
+                    <p class="color-clase">.color-hsla {<br> color: hsla(300, 100%, 50%, 1); <br> background-color: hsla(300, 100%, 50%, 0.2); <br>}</p>
+                    <div class="ejemplo-color-hsla">
+                        <p class="ejemplo-hlsa">Este párrafo tiene un color de texto en sistema HSLA con una transparencia nula, además de un color de fondo en el mismo formato con transparencia alta.</p>
+                    </div>
+                </div><!--Cierre formato-color-->
+            </div><!--Cierre formatos-colores-->
+            <!--5.6------------------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES ESTILOS DE COLORES------------------------->
+            <h3>5.6 En este apartado observamos los formatos que se pueden usar para aplicar color al fondo (Background):</h3>
+            <div class="formatos-background" id="background-color">
+                <div class="formato-background"><!--Nombre-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) haciendo referencia al nombre</h4>
+                    <p class="fondo-color">.color-nombre {<br>background-color: skyblue;<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-nombre">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema de colores predefinido</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+                <div class="formato-background"><!--Hexadecimal-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) aplicando el sistema hexadecimal</h4>
+                    <p class="fondo-color">.color-hexadecimal {<br>background-color: #FFDDC1;<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-hexadecimal">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema hexadecimal</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+                <div class="formato-background"><!--RGB-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) aplicando el sistema RGB</h4>
+                    <p class="fondo-color">.color-rgb {<br>background-color: rgb( 125, 140, 160);<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-rgb">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema RGB (Red, Green, Blue)</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+                <div class="formato-background"><!--RGBA-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) aplicando el sistema RGBA</h4>
+                    <p class="fondo-color">.color-rgba {<br>background-color: rgba(180, 20, 40, 0.3);<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-rgba">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema RGBA (Red, Green, Blue, Alpha)</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+                <div class="formato-background"><!--HSL-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) aplicando el sistema HSL</h4>
+                    <p class="fondo-color">.color-hsl {<br>background-color: hsl(200, 70%, 80%);<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-hsl">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema HSL (Hue, Saturation, Light)</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+                <div class="formato-background"><!--HSLA-->
+                    <img src="imagenes/paper.png" alt="Papeles de colores representando fondos">
+                    <h4>Aquí vamos a aplicar un color de fondo (background-color) haciendo referencia al nombre</h4>
+                    <p class="fondo-color">.color-hsla {<br>background-color: hsla(340, 80%, 70%, 0.5);<br> color: black;<br>padding: 10px;<br>border: 1px solid green;<br>}</p>
+                    <div class="ejemplo-background-hsla">
+                        <p style="color: black;">Este fondo tiene el color adjudicado a través del sistema HSLA (Hue, Saturation, Light, Alpha)</p>
+                    </div>
+                </div><!--Cierre formato-background-->
+            </div><!--Cierre formatos-background-->
+            <!--5.7------------------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES OPACITY------------------------->
+            <h3>5.7 En este apartado resaltamos la propiedad "opacity" que se usa para crear transparencia:</h3>
+            <div class="formatos-opacity" id="opacity">
+                <div class="formato-opacity">
+                    <div class="ejemplo-opacity">
+                        <img src="imagenes/transparency.png" alt="Capa transparentando sobre otra" class="transparency">
+                        <figure>
+                            <img src="imagenes/groundhog.png" alt="Marmota saludando" class="marmota">
+                            <figcaption>Esta es la imagen de fondo</figcaption>
+                        </figure>
+                    </div>
+                    <h4>Aquí vamos a aplicar una transparencia ligera en un &ltdiv&gt sobre una imagen de fondo.</h4>
+                    <div class="div-low-opacity"><p>Este es el &ltdiv&gt <br>div {<br>background-color: green;<br>opacity: 0.8;<br>}</p></div>
+                </div><!--Cierre formato-opacity-->
+                <div class="formato-opacity">
+                    <div class="ejemplo-opacity">
+                        <img src="imagenes/transparency.png" alt="Capa transparentando sobre otra" class="transparency">
+                        <figure>
+                            <img src="imagenes/groundhog.png" alt="Marmota saludando" class="marmota">
+                            <figcaption>Esta es la imagen de fondo</figcaption>
+                        </figure>
+                    </div>
+                    <h4>Aquí vamos a aplicar una transparencia más alta en un &ltdiv&gt sobre una imagen de fondo.</h4>
+                    <div class="div-low-opacity2"><p>Este es el &ltdiv&gt <br>div {<br>background-color: #000000;<br>opacity: 0.5;<br>}</p></div>
+                </div><!--Cierre formato-opacity-->
+            </div><!--Cierre formatos-opacity-->
+            <!--5.8------------------------------------------CONTENEDOR DE TODAS LAS PROPIEDADES BACKGROUND-IMAGE------------------------->
+            <div class="formatos-background-image" id="background-image">
+                <h3>5.8 En este apartado resaltamos la propiedad "background-image" que se usa para insertar imágenes de fondo o degradados de color:</h3>
+                <div class="formato-background-image">
+                    <div class="back-image-head">
+                    <h4>En esta sección se aplican distintos diseños de fondo y la explicación aparecerá cuando seleccionemos uno de la lista:</h4>
+                    
+                    </div>
+                    <form action="none"></form>
+                    <select class="images-list" name="imagen de fondo" id="images-list">
+                        <option value="default">Selecciona un fondo</option>
+                        <option value="simple" selected="selected">Simple</option>
+                        <option value="repeat" selected="selected">Repetido</option>
+                        <option value="no-repeat" selected="selected">Sin repetición</option>
+                        <option value="gradient" selected="selected">Degradado</option>
+                    </select>
+                    <div class="backgroundexample" id="backgroundexample"></div>
+                </div>
+            </div><!--Cierre de formatos-background-image-->
+            <!--6.Márgenes simétricos y asimétricos-->
+            <div class ="propiedades-margen" id="margenessim">
+                <h2>Márgenes simétricos y asimétricos</h2>
+                <h3>En este apartado vamos a introducir los distintos tipos de márgenes aplicables a un texto, contenedor o imagen:</h3>
+                <div class="propiedad-margen-simetrico">
+                    <img src="./imagenes/margin.png" alt="folio con márgenes" style="float: left;">
+                    <p>Este texto y estas imágenes tienen un margen simétrico, aplicado en los cuatro lados por igual</p>
+                </div>
+                <div class="propiedad-margen-asimetrico">
+                    <img src="./imagenes/margin.png" alt="folio con márgenes" style="float: left;">
+                    <p>Este texto y estas imágenes tienen un margen asimétrico, aplicado en los cuatro por separado</p>
+                </div>
+                <div class="explaining">
+                    <h4 style="padding: 2%;">Hay varias formas de aplicar márgenes (margin) y separaciones (padding) en los textos e imágenes:</h4>
+                    <p style="color: aqua; padding: 1%; margin: 1%; line-height: 1.5;">Principalmente se aplican en el sentido de las agujas del reloj (arriba, derecha, abajo, izquierda):</p> 
+                    <div class="ejemplo-margen">.ejemplo { <br>margin: 20%; <br>}</div> <p><b style="color: rgb(43, 226, 43); margin: 1%;">Este margen aplicaría un 20% de distancia entre bordes en los 4 costados del texto o la imagen</b></p>
+                    <div class="ejemplo-margen">.ejemplo { <br>margin: 10px 2px 8px 20px; <br>}</div> <p><b style="color: rgb(43, 226, 43); margin: 1%;">Este margen aplicaría 10 px arriba, 2px derecha, 8 px abajo y 20 px izquierda de distancia entre bordes en los 4 costados del texto o la imagen</b></p>
+                    <div class="ejemplo-margen">.ejemplo { <br>margin: 50px 0; <br>}</div> <p><b style="color: rgb(43, 226, 43); margin: 1%;">Este margen aplicaría 50 px de distancia verticalmente al texto o la imagen</b></p>
+                    <div class="ejemplo-margen">.ejemplo { <br>margin: 0 50px; <br>}</div> <p><b style="color: rgb(43, 226, 43); margin: 1%;">Este margen aplicaría 50 px de distancia horizontalmente al texto o la imagen</b></p>
+                </div>
+            </div>
+        </div><!--Div de cierre de class="sections"-->
+    </main>
+    <footer>
+        <p>&copy; Néstor Cosme. Todos los derechos reservados</p>
+    </footer>
+    <script src="./JS/dropdown.js"></script>
+</body>
+</html>
