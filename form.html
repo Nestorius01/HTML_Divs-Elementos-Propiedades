@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Formulario Seguro y accesible</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de suscripción seguro y accesible</h1>
+        <div class="nav" id="nav3">
+            <nav><a href="index.html">Estilos CSS</a><a href="display.html">Display</a><a href="form.html">Formulario</a><a href="accesibilty.html">Accesibilidad</a><a href="optimifuentes.html">Optimizar Fuentes</a></nav>
+        </div>
+    </header>
+    <Main>
+        <div class="ventana-flotante">
+            <nav><a href="#nav3">Índice</a></nav>
+        </div>
+        <h2>Formato y presentación del formulario</h2>
+        <section>
+            <form action="procesar_suscripcion.php" method="post" aria-labelledby="suscription-title">
+                <h3>Nuestro formulario en el &lt; <span class="el">main</span> &gt; debe tener el siguiente formato:</h3>
+                <div class="formulario">
+
+                    <h4>Para integrar la petición de correo electrónico:</h4>
+                    <div class="code-form">
+                        <div class="roboto2">
+                            <p>&lt;<span style="color: rgb(89, 122, 192);">form </span><span style="color: aqua;">action</span>=<span style="color: orange;">"procesar_suscripcion.php"</span> <span style="color: aqua;">method</span>=<span style="color: orange;">"post"</span><span style="color: aqua;"> aria-labelledby</span>=<span style="color: orange;">"suscription-title"</span>&gt</p>
+                            <p style="color: greenyellow;">&lt;!--CAMPO VISIBLE PARA EL USUARIO--&gt;</p>
+                            <p>&lt;<span class="el">label</span> <span class="pr">for</span>=<span class="val">"email"</span>&gt;Correo Electrónico:&lt;/<span class="el">label</span>&gt;</p>
+                            <p>&lt;<span class="el">input</span> <span class="pr">type</span>=<span class="val">"email"</span> <span class="pr">id</span>=<span class="val">"email"</span><span class="pr"> name</span>=<span class="val">"email"</span> <span class="pr">placeholder</span>=<span class="val">"ejemplo@correo.com"</span><span class="pr"> required
+                            aria-describedby</span>=<span class="val">"email-info"</span>&gt;</p>
+                            <p>&lt;<span class="el">small </span><span class="pr">id</span>=<span class="val">"email-info"</span>&gt;Por favor, ingresa un correo electrónico válido&lt;/<span class="el">small</span>&gt;</p>
+                        </div>
+                        <div>
+                            <fieldset class="resultado">
+                            <legend class="legend"><h4>RESULTADO:</h4></legend>
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required
+                            aria-describedby="email-info">
+                            <small id="email-info">Por favor, ingresa un correo electrónico válido.</small>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <h4>Para la integración de un captcha:</h4>
+                    <div class="code-form">
+                        <div class="roboto2">
+                        <p style="color: greenyellow">&lt;!-- Campo CAPTCHA simple --&gt;</p>
+                        <p>&lt;<span class="el">div</span>&gt;</p>
+                        <p>&lt;<span class="el">label</span> <span class="pr">for</span>=<span class="val">"captcha"</span>&gt;¿Cuánto es 2 + 3?&lt;/<span class="el">label</span>&gt;</p>
+                        <p>&lt;<span class="el">label</span> <span class="pr">for</span>=<span class="val">"captcha"</span> <span class="pr">name</span>=<span class="val">"captcha"</span> <span class="pr">pattern</span>=<span class="val">"5"</span> <span class="pr">required aria-describedby</span>=<span class="val">"captcha-info"</span>&gt;</p>
+                        <p>&lt;<span class="el">small</span> <span class="pr">id</span>=<span class="val">"captcha-info"</span>&gt;Esta pregunta nos ayuda a confirmar que no eres un robot.</p>
+                        <p>&lt;/<span class="el">div</span>&gt;</p>
+                        </div>
+                        <fieldset class="resultado">
+                            <legend class="legend"><h4>RESULTADO</h4></legend>
+                            <!-- Campo CAPTCHA Simple -->
+                        <div>
+                            <label for="captcha">¿Cuánto es 2 + 3?</label>
+                            <input type="text" id="captcha" name="captcha" pattern="5" required
+                            aria-describedby="captcha-info">
+                            <small id="captcha-info">Esta pregunta nos ayuda a confirmar que no eres un robot.</small>
+                        </div>
+                        </fieldset>
+                    </div>
+
+                    <h4>Para la integración de un honeypot:</h4>
+                    <div class="code-form">
+                        <div class="roboto2">
+                            <p style="color: greenyellow;">&lt;-- Honeypot: Campo oculto para bots --&gt;</p>
+                            <p>&lt;<span class="el">div</span> <span class="pr">style</span>=<span class="val">"display: none"</span>&gt;</p>
+                            <p>&lt;<span class="el">label</span> <span class="pr">for</span>=<span class="val">"extra"</span>&gt;Si eres humano deja este campo vacío:&lt;/<span class="el">label</span>&gt;</p>
+                            <p>&lt;<span class="el">input</span> <span class="pr">type</span>=<span class="val">"text"</span> <span class="pr">id</span>=<span class="val">"extra"</span> <span class="pr">name</span>=<span class="val">"exra"</span>&gt;</p>
+                            <p>&lt;/<span class="el">div</span>&gt;</p>
+                        </div>
+                        <fieldset class="resultado">
+                            <legend class="legend"><h4>RESULTADO</h4></legend>
+                            <!-- Honeypot: Campo oculto para bots -->
+                            <div style="display: none;">
+                            <label for="extra">Si eres humano, deja este campo vacío:</label>
+                            <input type="text" id="extra" name="extra">
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <h4>Para la integración de un captcha con botón deslizante:</h4>
+                    <div class="code-form">
+                        <div class="roboto2">
+                            <p style="color: greenyellow;">&lt;-- Captcha con botón deslizante --&gt;</p>
+                            <p>&lt;<span class="el">section</span>&gt;</p>
+                            <p>&lt;<span class="el">form</span> <span class="pr">action</span>=<span class="val">"/action_page.php"</span><br><span class="pr">oninput</span>=<span class="val">"x.value=parselnt(a.value)+parselnt(b.value)"</span>&gt;</p>
+                            <p>&lt;<span class="el">input</span> <span class="pr">type</span>=<span class="val">"range"</span> <span class="pr">id</span>=<span class="val">"a"</span> <span class="pr">name</span>=<span class="val">"a"</span> <span class="pr">value</span>=<span class="val">"50"</span>&gt; 0</p>
+                            <p>100 +</p>
+                            <p>&lt;<span class="el">input</span> <span class="pr">type</span>=<span class="val">"number"</span> <span class="pr">id</span>=<span class="val">"b"</span> <span class="pr">name</span>=<span class="val">"b"</span> <span class="pr">value</span>=<span class="val">"50"</span>&gt; =</p>
+                            <p>&lt;<span class="el">output</span> <span class="pr"> type</span>=<span class="val">"x"</span> <span class="pr">for</span>=<span class="val">"a b"</span>&gt;&lt;/<span class="el">output</span>&gt;</p>
+                            <p>&lt;<span class="el">input</span> <span class="pr">type</span>=<span class="val">"submit"</span>&gt;</p>
+                            <p>&lt;/<span class="el">form</span>&gt;</p>
+                            <p>&lt;/<span class="el">section</span>&gt;</p>
+                        </div>
+                        <fieldset class="resultado">
+                            <legend class="legend"><h4>RESULTADO</h4></legend>
+                            <!-- Captcha con botón deslizante -->
+                            <section>
+                            <form action="/action_page.php"
+                            oninput="x.value=parseInt(a.value)+parseInt(b.value)"> 0
+                            <input type="range" id="a" name="a" value="50">
+                            100 +
+                            <input type="number" id="b" name="b" value="50"> =
+                            <output name="x" for="a b">150</output>
+                            <br><br>
+                            <input type="submit">
+                            </form>
+                            </section>
+                        </fieldset>
+                    </div>
+
+                    <h2>Explicación del código e implementación con javascript:</h2>
+                    <div class="aplicacion">
+                    <ol>
+                        <li><h4>Estructura semántica:</h4></li>
+                        <ul>
+                            <li>El formulario está contenido dentro de un &lt;section&gt; con un título &lt;h2&gt;</li>
+                        </ul>
+                        <li><h4>Campos del Formulario:</h4></li>
+                        <ul>
+                            <li><b>Correo Electrónico</b>
+                                <ul>
+                                    <li>Usa <span class="pr">type</span>=<span class="val">"email"</span> para validar el correo.</li>
+                                    <li>Atributo required asegura que el campo no esté vacío.</li>
+                                </ul>
+                            </li>
+                            <li><b>Captcha Simple</b>
+                                <ul>
+                                    <li>Pregunta matemática (2 + 3) con un pattern para validar la respuesta correcta en el lado del cliente.</li>
+                                </ul>
+                            </li>
+                            <li><b>Campo Honeypot</b>
+                                <ul>
+                                    <li>Campo oculto visible solo para bots. Si se completase, se invalidaría el formulario.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <li><h4>Accesibilidad:</h4></li>
+                        <ul>
+                            <li>Uso de aria-describedby para asociar mensajes informativos a los campos.</li>
+                            <li>Etiquetas &lt;<span class="el">label</span>&gt; conectadas con <span class="pr">for</span>aseguran que los campos sean accesibles.</li>
+                        </ul>
+                        <li><h4>Seguridad:</h4></li>
+                            <ul>
+                                <li>La validación en el cliente previene errores básicos</li>
+                                <li>El servidor (archivo procesar_suscripcion.php) deberá validar y sanitizar los datos antes de procesarlos.</li>
+                            </ul>
+                    </ol>
+                    <h3>Validación en el servidor (Ejemplo PHP)</h3>
+                    <div class="validacion">
+                        <h4>A continuación una implementación básica para el archivo procesar_suscripcion.php.</h4>
+                        <p>Este código protege contra XSS y bots.</p>
+                        <div class="php">
+                            <img src="imagenes/php.PNG" alt="captura de pantalla de php">
+                        </div>
+                    </div>
+                    <ol><h4 style="font-size: larger;">Resumen de seguridad:</h4>
+                        <li> <u>Protección contra XSS:</u> Se sanitizan las entradas del usuario utilizando filter_input() y FILTER_SANITIZE_*.</li>
+                        <li> <u>Protección contra Bots:</u> 
+                            <ul>
+                                <li>Campo honeypot oculto (extra).</li>
+                                <li>CAPTCHA simple</li>
+                            </ul>
+                        </li>
+                        <li> <u>Validación estricta:</u>
+                            <ul>
+                                <li>Verificación del correo electrónico.</li>
+                                <li>Validación del CAPTCHA.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    </div>
+                    <h2 style="font-size: larger;">Resultado final:</h2>
+                    <div class="resultado">
+                        <h3>Página principal (index.html)</h3>
+                        <ul>
+                            <li>Contiene un formulario amigable y accesible</li>
+                            <li>Los campos aseguran una experiencia óptima para usuarios y protegen contra <br>
+                            bots y amenazas comunes (Bots no demasiado avanzados...)</li>
+                        </ul>
+                        <h3>Servidor (Procesar_suscripcion.php)</h3>
+                        <ul>
+                            <li>Verifica y sanitiza las entradas.</li>
+                            <li>Proporciona protección contra ataques como XSS y spam</li>
+                        </ul>
+                        <p>"Robots más avanzados podrían pasar estos filtros, ya que hoy en día hay bots muy dinámicos y con capacidades de detección avanzadas."</p>
+                    </div>
+
+                </div><!--FORMULARIO END-->
+            </form>
+        </section>
+    </Main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Optimización fuentes</title>
+</head>
+<body>
+    <header>
+        <h1>Optimización de Fuentes</h1>
+        <div class="nav" id="nav5">
+            <nav><a href="index.html">Estilos CSS</a><a href="display.html">Display</a><a href="form.html">Formulario</a><a href="accesibilty.html">Accesibilidad</a><a href="optimifuentes.html">Optimizar Fuentes</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="ventana-flotante">
+            <nav><a href="#nav5">Índice</a></nav>
+        </div>
+        <h2>WOFF2 (Web Open Font Format 2)</h2>
+        <div class="woff2">
+            <p>Es una versión mejorada del formato WOFF, utilizado para incrustar fuentes en páginas web.</p>
+            <p>WOFF2 aplica compresión adicional, lo que permite reducir el tamaño de los archivos de fuente hasta un 30%</p>
+            <p>en comparación con WOFF1 y otros formatos como TTF y OTF.</p>
+        </div>
+        <h3>Ejemplo de reducción de tamaño:</h3>
+        <div class="ejemplo">
+            
+            <p style="text-align: center;">Supongamos que tenemos una fuente llamada OpenSans en diferentes formatos:</p>
+            <table>
+                <thead>
+                    <th>Fomato</th>
+                    <th>Tamaño Original</th>
+                    <th>Tamaño Comprimido</th>
+                    <th>Reducción (%)</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>TFF</b></td>
+                        <td>150KB</td>
+                        <td>150KB</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td><b>OTF</b></td>
+                        <td>140KB</td>
+                        <td>140KB</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td><b>WOFF</b></td>
+                        <td>100KB</td>
+                        <td>100KB</td>
+                        <td>33%</td>
+                    </tr>
+                    <tr>
+                        <td><b>WOFF2</b></td>
+                        <td>70KB</td>
+                        <td>70KB</td>
+                        <td>53%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="resultado2">
+                <li>WOFF2 logra reducir el tamaño de OpenSans de 150 KB (TTF) a 70KB, ahorrando ancho de banda y mejorando los tiempos de carga.</li>
+            </div>
+        </div>
+        <h3>Implementación de WOFF2 en CSS:</h3>
+        <div class="ejemplo">
+            <p><span class="imp">@font-face</span> <span class="cla">{</span></p>
+            <p><span class="pr">font-family</span>: <span class="val"> 'OpenSans'</span>;</p>
+            <p><span class="pr">src</span>: <span class="cla">url</span><span class="val"> ('fonts/OpenSans.woff2')</span> <span class="cla">format</span> <span class="val">('woff2')</span>;</p>
+            <p>&ensp;&emsp; <span class="cla">url</span><span class="val"> ('fonts/OpenSans.woff2')</span> <span class="cla">format</span> <span class="val">('woff')</span>;</p>
+            <p><span class="pr">font-weight</span>: <span class="val"> normal</span>;</p>
+            <p><span class="pr">font-style</span>: <span class="val"> normal</span>;</p>
+            <p><span class="cla">}</span></p>
+            <li>Explicación:
+                <ul><br>
+                    <li>Se carga primero la fuente en formato woff2</li><br>
+                    <li>Si el navegador no admite woff2, se usa woff como respaldo</li><br>
+                    <li>Navegadores antiguos que no admiten WOFF cargan el formato estándar (si está disponible).</li>
+                </ul>
+            </li>
+        </div>
+        <h3>Ventajas de WOFF2:</h3>
+        <div class="ejemplo">
+            <ul>
+                <li><b style="color: bisque;">Reducción de tamaño:</b> Hasta un 30% más pequeño que WOFF y hasta 50% frente a TTF.</li><br>
+                <li><b style="color: bisque;">Carga más rápida:</b> Mejora el rendimiento web, reduciendo el tiempo de carga de fuentes personalizadas.</li><br>
+                <li><b style="color: bisque;">Compatibilidad:</b> Es compatible con la mayoría de navegadores modernos (Chrome, Firefox, Edge, Opera).</li><br>
+            </ul>
+        </div>
+        <h3>Compatibilidad en navegadores para WOFF2:</h3>
+        <div class="ejemplo">
+            <table>
+                <thead>
+                    <th>Navegador</th>
+                    <th> Soporta WOFF2</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Chrome</b></td>
+                        <td>Sí (Desde v36)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Firefox</b></td>
+                        <td>Sí (Desde v35)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Edge</b></td>
+                        <td>Sí (Desde v14)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Safari</b></td>
+                        <td>Sí (Desde v12)</td>
+                    </tr>
+                    <tr>
+                        <td><b>Opera</b></td>
+                        <td>Sí (Desde v26)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 style="text-align: center;">Comparación visual del tamaño de Fuente por Formato:</h4>
+            <div class="grafica">
+                <img src="imagenes/grafica.PNG" alt="gráfica de tamaños de formato";>
+            </div>
+        </div>
+        <h3>Implementación de carga condicional de fuentes y fallbacks:</h3>
+            <div class="ejemplo">
+                <p>Garantiza que, si una fuente personalizada no se carga correctamente, el navegador utilice una alternativa.</p>
+                <p>Esto mejora la experiencia del usuario y la accesibilidad.</p>
+                <p><span class="cla">body {</span></p>
+                <p><span class="pr">font-family</span>: <span class="val">'OpenSans', Arial, sans-serif</span>;</p>
+                <p><span class="cla">}</span></p>
+                <li><b>Explicación:</b></li>
+                <ul><br>
+                    <li>Si Open Sans no está disponible, se cargará Arial.</li><br>
+                    <li>Si Arial tampoco está disponible, se usará una fuente genérica sans-serif.</li><br>
+                </ul>
+            </div>
+        <h3>Implementar carga condicional con font-display:</h3>
+        <div class="ejemplo">
+            <p>El uso de font-display permite controlar cómo y cuándo se muestra una fuente web mientras se carga.</p>
+            <p> <span class="imp">@font-face</span> <span class="cla">{</span></p>
+                <p><span class="pr">font-family</span>: <span class="val"> 'Roboto'</span>;</p>
+                <p><span class="pr">src</span>: <span class="cla">url</span><span class="val"> ('fonts/Roboto.woff2')</span> <span class="cla">format</span> <span class="val">('woff2')</span>;</p>
+                <p>&ensp;&emsp; <span class="cla">url</span><span class="val"> ('fonts/Roboto.woff2')</span> <span class="cla">format</span> <span class="val">('woff')</span>;</p>
+                <p><span class="pr">font-display</span>: <span class="val"> swap</span>;</p>
+                <p><span class="cla">}</span></p>
+                <li><b>Opciones de font-display:</b></li>
+                <ul><br>
+                    <li><b>swap</b> - Usa la fuente de fallback hasta que la fuente personalizada esté disponible.</li><br>
+                    <li><b>fallback</b> - Usa el gallback si la fuente personalizada tarda demasiado en cargar.</li><br>
+                    <li><b>block</b> - Oculta el texto hasta que la fuente esté lista.</li><br>
+                    <li><b>optional</b> - Usa el fallback si la fuente no se carga rápidamente.</li>
+                </ul>
+        </div>
+        <h3>Implementación de fallbacks por clase:</h3>
+        <div class="ejemplo">
+            
+        </div>
+    </main>
+</body>
+</html>
